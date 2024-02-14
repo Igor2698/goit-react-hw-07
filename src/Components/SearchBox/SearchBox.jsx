@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "../SearchBox/SearchBox.module.css";
-import { getFilter } from "../../redux/selectors";
+import { selectFilter } from "../../redux/selectors";
 import { setFilter } from "../../redux/filterSlice";
 
-export const SearchBox = () => {
+const SearchBox = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getFilter);
+  const filter = useSelector(selectFilter);
 
   return (
     <div className={css.searchBoxContainer}>
@@ -26,3 +26,5 @@ export const SearchBox = () => {
     </div>
   );
 };
+
+export default SearchBox;
