@@ -20,7 +20,8 @@ function App() {
     <>
       <ContactForm />
       <SearchBox />
-      {isLoading ? <Loader /> : <ContactList />}
+      {isLoading && <Loader />}
+      <ContactList />
       {error && <p>Something went wrong, please reload the page</p>}
     </>
   );
